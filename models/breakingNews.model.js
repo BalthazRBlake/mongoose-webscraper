@@ -10,4 +10,4 @@ const BreakingNewsSchema = new Schema(
     timestamps: { createdAt: true, updatedAt: true }
   });
 
-  module.exports = mongoose.model("Cat", BreakingNewsSchema);
+  module.exports = mongoose.model("BreakingNews", BreakingNewsSchema);
