@@ -7,3 +7,13 @@ mongoose.connect(connectionString, {
 });
 
 const Cat = mongoose.model("Cat", { name: String });
+
+const kitty = new Cat({ name: "Persick" });
+
+kitty
+  .save()
+  .then(cat => console.log(`Cat ${cat.name} has been saved`));  
+
+Cat
+  .find()
+  .then(console.log);
