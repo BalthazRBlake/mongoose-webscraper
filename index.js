@@ -6,3 +6,4 @@ mongoose.connect(connectionString, {
   useUnifiedTopology: true 
 });
 
+const Cat = mongoose.model("Cat", { name: String });
