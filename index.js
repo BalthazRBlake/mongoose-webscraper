@@ -3,7 +3,7 @@ const { MONGO_URI } = require("./config");
 const axios = require("axios").default;
 const cheerio = require("cheerio");
 const cron = require("node-cron");
-//const { BreakingNews } = require("./models");
+const { BreakingNews } = require("./models");
 
 mongoose.connect(MONGO_URI, { 
   useNewUrlParser: true, 
@@ -22,7 +22,7 @@ cron.schedule("*/10 * * * * *", async () => {
       link: $(element).children().attr("href")
     }
   
-  //BreakingNews.create([breakingNews]);
+  BreakingNews.create([breakingNews]);
   });
 });
 

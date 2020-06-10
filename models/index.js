@@ -1,3 +1,3 @@
 module.exports = {
-  BreakingNews = require("./breakingNews.model")
+  BreakingNews: require("./breakingNews.model")
 }
